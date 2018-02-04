@@ -105,7 +105,7 @@ class FileRest {
         $sizeName = $data['sizeName'];
         $response = new Response(ResponseCode::successful);
 
-        if (FileType::isImage($data['type']) && !empty($id)) {
+        if (FileType::isImage($type) && !empty($id)) {
             $verification = $this->fileService->deleteImage($id, $name, $sizeName);
             $response->response = $verification;
         } else {
@@ -118,7 +118,6 @@ class FileRest {
     
     function deleteOrphan() {
         $data = get_json();
-        $src = $data['src'];
 
         $response = new Response(ResponseCode::successful);
 

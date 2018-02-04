@@ -3,7 +3,7 @@ Contributors: nicearma
 Tags: media clean, image clean, attachment clean, delete, image not used, image unused, files unused, files not used, delete unused, delete not used image, clean up image, clean image, clean images, clean, clean wp, clean wordpress
 Requires at least: 4.4
 Tested up to: 4.8
-Stable tag: 1.0
+Stable tag: 1.1
 
 Search image from the database and delete all unused images making space in your server and clean up the database from all them
  
@@ -28,6 +28,10 @@ Github at <a href="https://github.com/nicearma/ultimate-media-cleaner-js">UMC JS
 Github at <a href="https://github.com/nicearma/ultimate-media-cleaner-php">UMC PHP</a>
 
 == Changelog ==
+
+= Version 1.1 =
+
+Change PHP 7 to PHP 5.6 compatibility
 
 = Version 1.0 =
 

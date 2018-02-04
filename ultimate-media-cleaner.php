@@ -2,7 +2,7 @@
 
 /*
   Plugin Name: Ultimate media cleaner
-  Version: 1.0
+  Version: 1.1
   Plugin URI: http://www.nicearma.com/
   Author: Nicearma
   Author URI: http://www.nicearma.com/

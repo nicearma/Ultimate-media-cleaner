@@ -2,8 +2,6 @@
 
 namespace UMC\sql;
 
-use UMC\model\Option;
-
 /**
  * All about database and SQL to search image
  *

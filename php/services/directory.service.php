@@ -178,7 +178,7 @@ class DirectoryService {
 
             if (count($directories->directories) > 0) {
                 foreach ($directories->directories as $directory) {
-
+                    // TODO: WHY PATH
                     $this->deleteDirectory($path);
                 }
             } else {

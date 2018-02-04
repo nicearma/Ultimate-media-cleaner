@@ -3,7 +3,6 @@
 namespace UMC\service;
 
 use UMC\sql\FrontSql;
-use UMC\model\Option;
 use UMC\model\Count;
 use UMC\service\OptionService;
 

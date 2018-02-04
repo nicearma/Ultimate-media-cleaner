@@ -3,9 +3,6 @@
 namespace UMC\service;
 
 use UMC\sql\BackupSql;
-use UMC\service\DirectoryService;
-use UMC\service\OptionService;
-use UMC\service\FileService;
 
 class BackupService {
 
@@ -36,7 +33,7 @@ class BackupService {
         return $verification;
     }
 
-    public function regular(int $id) {
+    public function regular($id) {
         $backupRegularDirectory = $this->backupRegularsDirectory();
         $file = $this->fileService->convertIdToFile($id);
         if (is_writable($backupRegularDirectory)) {
@@ -67,7 +64,7 @@ class BackupService {
         return false;
     }
 
-    public function orphan(string $src, $name) {
+    public function orphan($src, $name) {
         $backupOrphanDirectory = $this->backupOrphansDirectory();
         if (is_writable($backupOrphanDirectory)) {
 
@@ -95,7 +92,7 @@ class BackupService {
         return false;
     }
 
-    public function image(int $id, string $sizeName) {
+    public function image($id, $sizeName) {
         $backupImageDirectory = $this->backupImagesDirectory();
         $image = $this->fileService->convertIdToFile($id);
         if (is_writable($backupImageDirectory)) {
@@ -145,15 +142,15 @@ class BackupService {
         return false;
     }
 
-    public function restoreImage(int $id) {
+    public function restoreImage($id) {
         return $this->restoreFile($this->backupImagesDirectory($id));
     }
 
-    public function restoreRegular(int $id) {
+    public function restoreRegular($id) {
        return $this->restoreFile($this->backupRegularsDirectory($id));
     }
 
-    public function restoreOrphan(string $directory) {
+    public function restoreOrphan($directory) {
         $backupOrphanDirectory = $this->backupOrphansDirectory($directory);
         if (!file_exists($backupOrphanDirectory)) {
             return false;
@@ -250,7 +247,7 @@ class BackupService {
         
     }
 
-    private function createFolder(string $path) {
+    private function createFolder($path) {
         if (!file_exists($path)) {
             mkdir($path, 0755, true);
         }

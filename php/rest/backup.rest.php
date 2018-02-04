@@ -28,7 +28,6 @@ function umc_backup_verify() {
 add_action('wp_ajax_umc_backup_image', 'UMC\rest\umc_backup_image');
 
 function umc_backup_image() {
-
     $backupRest = new BackupRest();
     $backupRest->image();
 }
@@ -214,7 +213,6 @@ class BackupRest {
     }
 
     function getImages() {
-        $data = get_json();
         $directory = $this->backupService->getImages();
         $response = new Response(ResponseCode::successful, $directory);
         $response->json();
@@ -222,7 +220,7 @@ class BackupRest {
     }
 
     function getRegulars() {
-        $data = get_json();
+
         $directory = $this->backupService->getRegulars();
         $response = new Response(ResponseCode::successful, $directory);
         $response->json();
@@ -230,7 +228,7 @@ class BackupRest {
     }
 
     function getOrphans() {
-        $data = get_json();
+
         $directory = $this->backupService->getOrphans();
         $response = new Response(ResponseCode::successful, $directory);
         $response->json();
